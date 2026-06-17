@@ -22,17 +22,12 @@ playwright install chromium
 ## 使用
 
 ```bash
-# 传入书籍 URL
-python weread_export.py https://weread.qq.com/web/bookDetail/xxxxx
-
-# 或直接传 book_id
-python weread_export.py dd6324f0813ab9f97g019a24
-
-# 指定输出目录
-python weread_export.py <book_id> -o ./books
-
-# 不保存原始 Canvas 数据（节省磁盘空间）
-python weread_export.py <book_id> --no-raw
+# 末 N 章
+C:\Users\CatciSurn\miniconda3\python.exe weread_export.py "<书链接>" --last 5
+# 全本
+C:\Users\CatciSurn\miniconda3\python.exe weread_export.py "<书链接>"
+# 换账号
+... --relogin
 ```
 
 首次运行会弹出浏览器窗口要求扫码登录微信读书，登录后会话自动保存在 `cache/browser_profile/`。
